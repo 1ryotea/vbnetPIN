@@ -49,7 +49,7 @@
         End If
 
     End Sub
-    Dim pin As Integer
+    Dim pin As String
     Private Sub SavePin(sender As Object, e As EventArgs) Handles btnSAVE.Click
         pin = txt1.Text
         MessageBox.Show("TERSIMPAN")
@@ -62,9 +62,12 @@
     Private Sub btncek_Click(sender As Object, e As EventArgs) Handles btncek.Click
         If txt1.Text = pin Then
             MessageBox.Show("Pin Benar")
+            PictureBox1.Visible = True
+            btncek.Visible = False
         Else
             MessageBox.Show("Pin Salah")
+            txt1.Text = ""
         End If
-        'messagebox digunakan untuk memuncul windows baru untuk menampilkan pesan
+        'messagebox digunakan untuk memuncul windows baru untuk menampilkan pesan, bisa digunakan untuk menunda task
     End Sub
 End Class

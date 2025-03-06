@@ -36,6 +36,8 @@ Partial Class Form1
         Me.btnZERO = New System.Windows.Forms.Button()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btncek = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn1
@@ -165,11 +167,25 @@ Partial Class Form1
         Me.btncek.UseVisualStyleBackColor = True
         Me.btncek.Visible = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.minigame.My.Resources.Resources.boomb_cat_boomb
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(335, 495)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 14
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(330, 495)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btncek)
         Me.Controls.Add(Me.btnSAVE)
         Me.Controls.Add(Me.btnZERO)
@@ -185,11 +201,11 @@ Partial Class Form1
         Me.Controls.Add(Me.btn2)
         Me.Controls.Add(Me.btn1)
         Me.KeyPreview = True
-        Me.MaximumSize = New System.Drawing.Size(346, 534)
         Me.MinimumSize = New System.Drawing.Size(346, 534)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -209,4 +225,5 @@ Partial Class Form1
     Friend WithEvents btnZERO As Button
     Friend WithEvents btnHapus As Button
     Friend WithEvents btncek As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
