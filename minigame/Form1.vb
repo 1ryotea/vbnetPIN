@@ -52,11 +52,14 @@
     Dim pin As String
     Private Sub SavePin(sender As Object, e As EventArgs) Handles btnSAVE.Click
         pin = txt1.Text
-        MessageBox.Show("TERSIMPAN")
+        MessageBox.Show("PIN TERSIMPAN")
         txt1.Text = ""
         Console.WriteLine(pin)
         btncek.Visible = True
         btnSAVE.Visible = False
+        lbl1.Text = "Masukkan Pin Anda"
+        btnReset.Visible = True
+        btnReset.Enabled = True
     End Sub
 
     Private Sub btncek_Click(sender As Object, e As EventArgs) Handles btncek.Click
@@ -69,5 +72,25 @@
             txt1.Text = ""
         End If
         'messagebox digunakan untuk memuncul windows baru untuk menampilkan pesan, bisa digunakan untuk menunda task
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lbl1.Click
+
+    End Sub
+
+    Private Sub txt1_TextChanged(sender As Object, e As EventArgs) Handles txt1.TextChanged
+        If txt1.Text.Length > 4 Then
+            MessageBox.Show("PIN harus 4 digit")
+            txt1.Text = txt1.Text.Remove(txt1.Text.Length - 1)
+        End If
+    End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        MessageBox.Show("PIN Telah Direset")
+        btnReset.Enabled = False
+        btncek.Visible = False
+        btnSAVE.Visible = True
+        pin = ""
+        lbl1.Text = "Masukkan Pin Baru"
     End Sub
 End Class

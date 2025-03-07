@@ -37,12 +37,14 @@ Partial Class Form1
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btncek = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lbl1 = New System.Windows.Forms.Label()
+        Me.btnReset = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn1
         '
-        Me.btn1.Location = New System.Drawing.Point(12, 73)
+        Me.btn1.Location = New System.Drawing.Point(13, 108)
         Me.btn1.Name = "btn1"
         Me.btn1.Size = New System.Drawing.Size(100, 100)
         Me.btn1.TabIndex = 0
@@ -51,7 +53,7 @@ Partial Class Form1
         '
         'btn2
         '
-        Me.btn2.Location = New System.Drawing.Point(118, 73)
+        Me.btn2.Location = New System.Drawing.Point(119, 108)
         Me.btn2.Name = "btn2"
         Me.btn2.Size = New System.Drawing.Size(100, 100)
         Me.btn2.TabIndex = 1
@@ -60,7 +62,7 @@ Partial Class Form1
         '
         'btn3
         '
-        Me.btn3.Location = New System.Drawing.Point(227, 73)
+        Me.btn3.Location = New System.Drawing.Point(228, 108)
         Me.btn3.Name = "btn3"
         Me.btn3.Size = New System.Drawing.Size(100, 100)
         Me.btn3.TabIndex = 2
@@ -69,7 +71,7 @@ Partial Class Form1
         '
         'btn6
         '
-        Me.btn6.Location = New System.Drawing.Point(227, 179)
+        Me.btn6.Location = New System.Drawing.Point(228, 214)
         Me.btn6.Name = "btn6"
         Me.btn6.Size = New System.Drawing.Size(100, 100)
         Me.btn6.TabIndex = 5
@@ -78,7 +80,7 @@ Partial Class Form1
         '
         'btn5
         '
-        Me.btn5.Location = New System.Drawing.Point(121, 179)
+        Me.btn5.Location = New System.Drawing.Point(122, 214)
         Me.btn5.Name = "btn5"
         Me.btn5.Size = New System.Drawing.Size(100, 100)
         Me.btn5.TabIndex = 4
@@ -87,7 +89,7 @@ Partial Class Form1
         '
         'btn4
         '
-        Me.btn4.Location = New System.Drawing.Point(12, 179)
+        Me.btn4.Location = New System.Drawing.Point(13, 214)
         Me.btn4.Name = "btn4"
         Me.btn4.Size = New System.Drawing.Size(100, 100)
         Me.btn4.TabIndex = 3
@@ -96,7 +98,7 @@ Partial Class Form1
         '
         'btn9
         '
-        Me.btn9.Location = New System.Drawing.Point(227, 285)
+        Me.btn9.Location = New System.Drawing.Point(228, 320)
         Me.btn9.Name = "btn9"
         Me.btn9.Size = New System.Drawing.Size(100, 100)
         Me.btn9.TabIndex = 8
@@ -105,7 +107,7 @@ Partial Class Form1
         '
         'btn8
         '
-        Me.btn8.Location = New System.Drawing.Point(121, 285)
+        Me.btn8.Location = New System.Drawing.Point(122, 320)
         Me.btn8.Name = "btn8"
         Me.btn8.Size = New System.Drawing.Size(100, 100)
         Me.btn8.TabIndex = 7
@@ -114,7 +116,7 @@ Partial Class Form1
         '
         'btn7
         '
-        Me.btn7.Location = New System.Drawing.Point(12, 284)
+        Me.btn7.Location = New System.Drawing.Point(13, 319)
         Me.btn7.Name = "btn7"
         Me.btn7.Size = New System.Drawing.Size(100, 100)
         Me.btn7.TabIndex = 6
@@ -123,7 +125,7 @@ Partial Class Form1
         '
         'txt1
         '
-        Me.txt1.Location = New System.Drawing.Point(12, 4)
+        Me.txt1.Location = New System.Drawing.Point(13, 39)
         Me.txt1.Multiline = True
         Me.txt1.Name = "txt1"
         Me.txt1.Size = New System.Drawing.Size(315, 63)
@@ -132,7 +134,7 @@ Partial Class Form1
         '
         'btnSAVE
         '
-        Me.btnSAVE.Location = New System.Drawing.Point(224, 391)
+        Me.btnSAVE.Location = New System.Drawing.Point(225, 426)
         Me.btnSAVE.Name = "btnSAVE"
         Me.btnSAVE.Size = New System.Drawing.Size(100, 100)
         Me.btnSAVE.TabIndex = 12
@@ -141,7 +143,7 @@ Partial Class Form1
         '
         'btnZERO
         '
-        Me.btnZERO.Location = New System.Drawing.Point(118, 391)
+        Me.btnZERO.Location = New System.Drawing.Point(119, 426)
         Me.btnZERO.Name = "btnZERO"
         Me.btnZERO.Size = New System.Drawing.Size(100, 100)
         Me.btnZERO.TabIndex = 11
@@ -150,7 +152,7 @@ Partial Class Form1
         '
         'btnHapus
         '
-        Me.btnHapus.Location = New System.Drawing.Point(9, 390)
+        Me.btnHapus.Location = New System.Drawing.Point(10, 425)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(100, 100)
         Me.btnHapus.TabIndex = 10
@@ -159,7 +161,7 @@ Partial Class Form1
         '
         'btncek
         '
-        Me.btncek.Location = New System.Drawing.Point(224, 391)
+        Me.btncek.Location = New System.Drawing.Point(225, 426)
         Me.btncek.Name = "btncek"
         Me.btncek.Size = New System.Drawing.Size(100, 99)
         Me.btncek.TabIndex = 13
@@ -172,20 +174,42 @@ Partial Class Form1
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox1.Image = Global.minigame.My.Resources.Resources.boomb_cat_boomb
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, -2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(335, 495)
+        Me.PictureBox1.Size = New System.Drawing.Size(335, 588)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 14
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False
         '
+        'lbl1
+        '
+        Me.lbl1.AutoSize = True
+        Me.lbl1.Location = New System.Drawing.Point(15, 10)
+        Me.lbl1.Name = "lbl1"
+        Me.lbl1.Size = New System.Drawing.Size(149, 25)
+        Me.lbl1.TabIndex = 15
+        Me.lbl1.Text = "Buat Pin Anda"
+        '
+        'btnReset
+        '
+        Me.btnReset.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.btnReset.Enabled = False
+        Me.btnReset.Location = New System.Drawing.Point(10, 531)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(318, 44)
+        Me.btnReset.TabIndex = 16
+        Me.btnReset.Text = "Lupa PIN ?"
+        Me.btnReset.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(330, 495)
+        Me.ClientSize = New System.Drawing.Size(330, 578)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnReset)
+        Me.Controls.Add(Me.lbl1)
         Me.Controls.Add(Me.btncek)
         Me.Controls.Add(Me.btnSAVE)
         Me.Controls.Add(Me.btnZERO)
@@ -226,4 +250,6 @@ Partial Class Form1
     Friend WithEvents btnHapus As Button
     Friend WithEvents btncek As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lbl1 As Label
+    Friend WithEvents btnReset As Button
 End Class
